@@ -1,0 +1,136 @@
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  color:white;
+  font-size:12px;
+  font-style:;
+}
+.grid{
+  display:grid;
+  grid-template-areas:"nav nav nav"
+                      "side article article"
+                      "main main main"
+                       "footer footer footer";
+}
+#item1{
+  background-color:rgb(20,20,20);
+  grid-area:nav;
+}
+#item2{
+  background-color:rgb(35,35,35);
+  grid-area:side;
+}
+#item3{
+  background-color:rgb(65,65,65);
+  grid-area:article;
+}
+#item4{
+  background-color:rgb(75,75,75);
+  grid-area:footer;
+}
+#item5{
+  background-color:rgb(95,95,95);
+  grid-area:main;
+}
+nav{
+  display:flex;
+  justify-content:center;
+}
+nav h1{
+  font-size:25px;
+  margin:10px;
+  align-self:center;
+}
+nav h2{
+  flex-grow:2;
+}
+nav ul{
+  display:flex;
+  justify-content:center;
+  justify-content:space-evenly;
+}
+nav ul li{
+  list-style:none;
+  transition: background-color 1s;
+  margin:10px;
+  padding:10px;
+}
+aside h2{
+  margin:10px;
+  padding:10px;
+}
+aside ul{
+  display:flex;
+  flex-direction:column;
+}
+#new-blog-img{
+  height:10%;
+  width:100%;
+}
+aside ul li{
+  list-style:none;
+  margin:10px;
+  padding:10px;
+  transition: background-color 1s;
+  transition:transform 1s;
+}
+article{
+  padding:15px;
+  margin:10px;
+}
+article h3{
+  font-size:20px;
+  margin:10px 0 10px 0; 
+}
+#article-img{
+  height:30%;
+  width:90%;
+}
+main{
+  padding:20px;
+  background-image:url(https://images.unsplash.com/photo-1715586041798-9583f0642747?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8);
+  background-size:cover;
+  background-position:center;
+}
+footer{
+  
+}
+footer ul{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  justify-content:space-evenly;
+}
+footer ul li{
+  list-style:none;
+  padding:15px 0 15px 15px;
+  width:100%;
+  transition:background-color 1s;
+}
+footer h3{
+  font-size:20px;
+  margin:15px;
+  background:rgb(45,45,45);
+  padding:15px;
+}
+footer div{
+  text-align:center;
+}
+/*Animations*/
+nav ul li:hover{
+  cursor:pointer;
+  background-color:rgb(35,35,35);
+}
+aside ul li:hover{
+  cursor:pointer;
+  background-color:rgb(65,65,65);
+  transform: translateX(5%);
+  transform: translateY(-15%); 
+}
+footer ul li:hover{
+  background-color:rgb(15,15,15);
+  cursor:pointer;
+}
