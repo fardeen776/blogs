@@ -5,7 +5,7 @@
 body{
   color:white;
   font-size:12px;
-  font-style:;
+  background:black;
 }
 .grid{
   display:grid;
